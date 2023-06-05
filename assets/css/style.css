@@ -179,11 +179,17 @@ main {
     margin-right: 4%;
 }
 
+
 /* examples of use article */
 
 .examples img {
     width: 45%;
     margin-bottom: 8%;
+}
+
+.examples img:nth-last-of-type(1),
+.examples img:nth-last-of-type(2) {
+    margin-bottom: 0px;
 }
 
 .examples img:nth-of-type(odd) {
