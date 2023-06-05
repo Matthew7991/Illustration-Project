@@ -26,6 +26,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    border: 1px solid red;
 }
 
 body {
@@ -135,4 +136,29 @@ article:not(:last-of-type) {
     padding-left: 104px;
     padding-right: 104px;
     text-align: center;
+}
+
+.content img {
+    width: 30%;
+    display: inline-block;
+}
+
+.content p {
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome img:nth-of-type(2) {
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.examples img {
+    width: 45%;
+    margin-bottom: 16px;
+}
+
+.examples img:nth-of-type(1n) {
+    margin-right: 16px;
 }
