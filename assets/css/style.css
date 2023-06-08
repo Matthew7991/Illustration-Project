@@ -76,13 +76,22 @@ article:not(:last-of-type) {
 
 .nav {
     font-family: var(--font-nav);
-    text-align: right;
+    /* text-align: right; */
+    display: flex;
+    justify-content: end;
 }
 
-.nav ul li {
-    display: inline-block;
+.nav ul {
+    display: flex;
+    column-gap: 16px;
     margin-right: 16px;
+
 }
+
+/* .nav ul li {
+    display: inline-block; 
+    margin-right: 16px;
+} */
 
 .nav a {
     text-transform: uppercase;
@@ -101,6 +110,30 @@ main {
     margin-left: 140px;
     margin-right: 140px;
 }
+
+.info img {
+    max-width: min(50%, 20rem);
+}
+
+.info article {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.info article:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.info article div {
+    max-width: 50%;
+}
+
+.info article div p {
+    margin-top: 1rem;
+}
+/*
+Was replaced with flexbox above
 
 .info article {
     min-height: 500px;
@@ -131,12 +164,13 @@ main {
 }
 .info article:nth-of-type(3) {
     background: url(../img/illustration3.png) no-repeat top right/45% 100%;
-}
+} */
 
 .links a {
     padding: 11px 19px;
     margin-right: 13px;
     border-radius: 10px;
+    display: inline-block;
 }
 
 .download {
@@ -162,10 +196,10 @@ main {
     margin-right: auto;
 }
 
-.content img {
+/* .content img {
     width: 30%;
     display: inline-block;
-}
+} */
 
 .content img:hover {
     /* box-shadow: 0px 0px 10px #d6c095; */
@@ -174,15 +208,38 @@ main {
 
 /* Welcome */
 
-.welcome img:nth-of-type(2) {
+.welcome div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.welcome div img {
+    width: max(30%, 300px);
+}
+
+/* .welcome img:nth-of-type(2) {
     margin-left: 4%;
     margin-right: 4%;
-}
+} */
 
 
 /* examples of use article */
 
-.examples img {
+.examples div img {
+    width: max(45%, 300px);
+}
+
+.examples div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    row-gap: 50px;
+}
+
+/* .examples img {
     width: 45%;
     margin-bottom: 8%;
 }
@@ -198,7 +255,7 @@ main {
 
 .examples img:nth-of-type(even) {
     margin-left: 4%;
-}
+} */
 
 /* membership article */
 
